@@ -10,7 +10,7 @@ package armprivatedns
 
 const (
 	moduleName    = "github.com/Azure/azure-sdk-for-go/sdk/resourcemanager/privatedns/armprivatedns"
-	moduleVersion = "v1.2.0"
+	moduleVersion = "v1.3.0"
 )
 
 // ProvisioningState - The provisioning state of the resource. This is a read-only property and any attempt to set this value

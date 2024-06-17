@@ -302,6 +302,10 @@ type VirtualNetworkLinkListResult struct {
 
 // VirtualNetworkLinkProperties - Represents the properties of the Private DNS zone.
 type VirtualNetworkLinkProperties struct {
+	// When enabled, falls back to public resolution if private dns query resolution for resources configured with privatelink
+	// results in non-existent domain response
+	NxdomainRedirect *bool
+
 	// Is auto-registration of virtual machine records in the virtual network in the Private DNS zone enabled?
 	RegistrationEnabled *bool
 

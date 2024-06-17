@@ -1,5 +1,11 @@
 # Release History
 
+## 1.3.0 (2024-06-17)
+### Features Added
+
+- New field `NxdomainRedirect` in struct `VirtualNetworkLinkProperties`
+
+
 ## 1.2.0 (2023-11-24)
 ### Features Added
 

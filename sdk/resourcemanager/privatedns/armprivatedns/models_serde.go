@@ -778,6 +778,7 @@ func (v *VirtualNetworkLinkListResult) UnmarshalJSON(data []byte) error {
 // MarshalJSON implements the json.Marshaller interface for type VirtualNetworkLinkProperties.
 func (v VirtualNetworkLinkProperties) MarshalJSON() ([]byte, error) {
 	objectMap := make(map[string]any)
+	populate(objectMap, "nxdomainRedirect", v.NxdomainRedirect)
 	populate(objectMap, "provisioningState", v.ProvisioningState)
 	populate(objectMap, "registrationEnabled", v.RegistrationEnabled)
 	populate(objectMap, "virtualNetwork", v.VirtualNetwork)
@@ -794,6 +795,9 @@ func (v *VirtualNetworkLinkProperties) UnmarshalJSON(data []byte) error {
 	for key, val := range rawMsg {
 		var err error
 		switch key {
+		case "nxdomainRedirect":
+			err = unpopulate(val, "NxdomainRedirect", &v.NxdomainRedirect)
+			delete(rawMsg, key)
 		case "provisioningState":
 			err = unpopulate(val, "ProvisioningState", &v.ProvisioningState)
 			delete(rawMsg, key)
@@ -825,7 +829,7 @@ func populate(m map[string]any, k string, v any) {
 }
 
 func unpopulate(data json.RawMessage, fn string, v any) error {
-	if data == nil {
+	if data == nil || string(data) == "null" {
 		return nil
 	}
 	if err := json.Unmarshal(data, v); err != nil {
