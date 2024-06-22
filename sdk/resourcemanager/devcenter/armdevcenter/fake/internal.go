@@ -11,6 +11,7 @@ package fake
 import (
 	"github.com/Azure/azure-sdk-for-go/sdk/azcore/fake/server"
 	"net/http"
+	"strings"
 	"sync"
 )
 
@@ -40,6 +41,13 @@ func parseOptional[T any](v string, parse func(v string) (T, error)) (*T, error)
 		return nil, err
 	}
 	return &t, err
+}
+
+func splitHelper(s, sep string) []string {
+	if s == "" {
+		return nil
+	}
+	return strings.Split(s, sep)
 }
 
 func newTracker[T any]() *tracker[T] {
