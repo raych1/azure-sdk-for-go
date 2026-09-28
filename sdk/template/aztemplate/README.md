@@ -4,6 +4,7 @@ Azure Template Package client library for Go (`aztemplate`)  matches necessary p
 
 The library allows client libraries to expose common functionality in a consistent fashion.  Once you learn how to use these APIs in one client library, you will know how to use them in other client libraries.
 
+## Test comment
 ## Getting started
 
 For a rich example of a well formatted readme, please check [here.](https://github.com/Azure/azure-sdk/blob/main/docs/policies/README-TEMPLATE.md) In addition, this is an [example readme](https://github.com/Azure/azure-sdk/blob/main/docs/policies/README-EXAMPLE.md) that should be emulated. Note that the top-level sections in this template align with that of the [template.](https://github.com/Azure/azure-sdk/blob/main/docs/policies/README-TEMPLATE.md)
