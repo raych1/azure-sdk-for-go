@@ -5,6 +5,7 @@
 ### Features Added
 
 * Template package validating release pipeline
+* Test webapp
 
 ## 0.6.5 (2026-07-08)
 
