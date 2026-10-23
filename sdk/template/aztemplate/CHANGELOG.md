@@ -44,3 +44,5 @@
 ## 0.1.0 (2021-12-02)
 
 * Template package validating release pipeline
+
+<!-- AutoPR test: a5f78ee0-d6af-484e-aa3c-608fbb91abac -->
